@@ -60,7 +60,7 @@ final class ViewHandlerSpec extends ObjectBehavior
     ) {
         $requestConfiguration->isHtmlRequest()->willReturn(false);
         $view = View::create();
-        $view->setSerializationContext(new SerializationContext());
+        $view->setContext(new SerializationContext());
 
         $requestConfiguration->getSerializationGroups()->willReturn(['Detailed']);
         $requestConfiguration->getSerializationVersion()->willReturn('2.0.0');

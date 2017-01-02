@@ -44,7 +44,7 @@ final class ViewHandler implements ViewHandlerInterface
                 $this->restViewHandler->setExclusionStrategyVersion($version);
             }
 
-            $view->getSerializationContext()->enableMaxDepthChecks();
+            $view->getContext()->enableMaxDepthChecks();
         }
 
         return $this->restViewHandler->handle($view);
